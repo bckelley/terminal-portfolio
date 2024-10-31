@@ -13,10 +13,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build website
-        run: npm start
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src # Assuming your build output is in the 'build' directory
-          publish_branch: main
+        run: npm run deploy
+      - name: Commit and push to deploy branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Deploy to GitHub Pages"
+          git push origin HEAD:deploy
