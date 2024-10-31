@@ -1,5 +1,4 @@
 node_modules/
 .env
 bckelleyResume.docx
-app.js
-package*
+package-*
