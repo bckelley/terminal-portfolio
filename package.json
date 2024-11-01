@@ -1,4 +1,5 @@
 {
+  "homepage": "https://bckelley.github.io/terminal-portfolio/",
   "name": "terminal-portfolio",
   "version": "1.0.0",
   "main": "app.js",
